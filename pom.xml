@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.marschall</groupId>
   <artifactId>elytron-no-credential</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   
   <name>Elytron No-Credential</name>
   <inceptionYear>2023</inceptionYear>
@@ -15,7 +15,7 @@
     <connection>scm:git:git@github.com:marschall/elytron-no-credential.git</connection>
     <developerConnection>scm:git:git@github.com:marschall/elytron-no-credential.git</developerConnection>
     <url>${project.url}</url>
-    <tag>HEAD</tag>
+    <tag>1.0.0</tag>
   </scm>
 
   <dependencyManagement>
