@@ -8,6 +8,8 @@ import org.wildfly.security.credential.store.CredentialStore;
 
 public final class NoPasswordProvider extends Provider {
 
+  public static final String ALGORITHM = "no-password";
+
   public static final String PROVIDER_NAME = "NoPasswordProvider";
 
   private static NoPasswordProvider INSTANCE = new NoPasswordProvider();
@@ -17,7 +19,10 @@ public final class NoPasswordProvider extends Provider {
    */
   public NoPasswordProvider() {
     super(PROVIDER_NAME, "1.0", "no-password Password Provider");
-    putService(new Service(this, CredentialStore.CREDENTIAL_STORE_TYPE, "no-password", NoPasswordProvider.class.getName(), List.of(), Map.of()));
+
+    List<String> aliases = List.of();
+    Map<String, String> attributes = Map.of();
+    this.putService(new Service(this, CredentialStore.CREDENTIAL_STORE_TYPE, ALGORITHM, NoCredentialStore.class.getName(), aliases, attributes));
   }
 
   /**

@@ -93,6 +93,12 @@
   </distributionManagement>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -117,7 +123,7 @@
             <link>https://docs.oracle.com/en/java/javase/11/docs/api/</link>
             <link>https://wildfly-security.github.io/wildfly-elytron/documentation/api/current/</link>
           </links>
-          <release>17</release>
+          <release>11</release>
         </configuration>
         <executions>
           <execution>
