@@ -1,0 +1,2 @@
+# add the provider at the end
+security.provider.13=com.github.marschall.wildfly.elytron.credential.store.nocredential.NoPasswordProvider
