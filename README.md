@@ -6,6 +6,9 @@ An Elytron `CredentialStoreSpi` that supports null passwords. You may want to us
 Usage
 -----
 
+Extract the `module.xml` from the .JAR file and install it as a JBoss Module in WildFly.
+
+
 ```xml
             <providers>
                 <aggregate-providers name="combined-providers">
