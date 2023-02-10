@@ -2,9 +2,7 @@ package com.github.marschall.wildfly.elytron.credential.store.nocredential;
 
 import java.security.Provider;
 import java.security.spec.AlgorithmParameterSpec;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.wildfly.security.credential.Credential;
 import org.wildfly.security.credential.PasswordCredential;
@@ -12,7 +10,6 @@ import org.wildfly.security.credential.store.CredentialStore.ProtectionParameter
 import org.wildfly.security.credential.store.CredentialStoreException;
 import org.wildfly.security.credential.store.CredentialStoreSpi;
 import org.wildfly.security.credential.store.UnsupportedCredentialTypeException;
-import org.wildfly.security.password.interfaces.ClearPassword;
 
 public final class NoCredentialStore extends CredentialStoreSpi {
 
@@ -61,18 +58,5 @@ public final class NoCredentialStore extends CredentialStoreSpi {
   public boolean exists(String credentialAlias, Class<? extends Credential> credentialType) {
     return credentialType.isAssignableFrom(PasswordCredential.class);
   }
-
-//  @Override
-//  public Set<String> getAliases() throws UnsupportedOperationException, CredentialStoreException {
-//    // TODO Auto-generated method stub
-//    return super.getAliases();
-//  }
-//
-//  @Override
-//  public void validateAttribute(Map<String, String> attributes, List<String> validAttributes)
-//      throws CredentialStoreException {
-//    // TODO Auto-generated method stub
-//    super.validateAttribute(attributes, validAttributes);
-//  }
 
 }

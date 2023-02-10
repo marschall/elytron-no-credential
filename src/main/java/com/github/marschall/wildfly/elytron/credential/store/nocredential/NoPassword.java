@@ -3,8 +3,13 @@ package com.github.marschall.wildfly.elytron.credential.store.nocredential;
 import org.wildfly.security.password.Password;
 import org.wildfly.security.password.interfaces.ClearPassword;
 
+/**
+ * An implementation {@link ClearPassword} for a {@code null} password.
+ * 
+ * Similar to RawClearPassword.
+ */
 final class NoPassword implements ClearPassword {
-  
+
   static Password INSTANCE = new NoPassword();
 
   private NoPassword() {
@@ -27,7 +32,7 @@ final class NoPassword implements ClearPassword {
   }
 
   @Override
-  public char[] getPassword() throws IllegalStateException {
+  public char[] getPassword() {
     return null;
   }
 

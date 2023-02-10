@@ -6,6 +6,9 @@ import java.util.Map;
 
 import org.wildfly.security.credential.store.CredentialStore;
 
+/**
+ * JCE Provider implementation that registers {@link NoCredentialStore}.
+ */
 public final class NoPasswordProvider extends Provider {
 
   public static final String ALGORITHM = "no-password";
